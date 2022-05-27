@@ -10,7 +10,7 @@ class Config:
         Session = ":memory:"
     App_Name = os.environ.get("APP_NAME")
     Port = int(os.environ.get("PORT"))
-    Archive_Channel_ID = int(os.environ.get("ARCHIVE_CHANNEL_ID"))
+    BIN_CHANNEL = int(os.environ.get("BIN_CHANNEL"))
     Start_Message = os.environ.get("Start_Message")
     Bot_Channel = os.environ.get("Bot_Channel_UserName")
     if Bot_Channel and Bot_Channel.startswith("@"):
@@ -27,7 +27,7 @@ class Config:
     Pre_Dl = 3  # How many parts to download from telegram before client request them
     Separate_Time = 4  # (seconds)  wait time between messages if user send more than one
     Sleep_Threshold = 60  # (Seconds) sleep threshold for flood wait exceptions
-    Max_Fast_Processes = 1  # How many links user can update them to fast links at the same time
+    Max_Fast_Processes = 10  # How many links user can update them to fast links at the same time
 
 
 class Strings:
